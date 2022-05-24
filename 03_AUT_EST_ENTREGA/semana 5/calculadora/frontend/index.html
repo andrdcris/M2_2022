@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-    <form name="calculadora">
+    <form name="calculadora" method="post" action="">
            <label for="valor1">Digite o primeiro valor: </label>
            <input type="text" name="valor1" id="valor1" />
      
@@ -19,12 +19,14 @@
               <option value="subtrair">Subtrair</option>
               <option value="multiplicar">Multiplifcar</option>
               <option value="dividir">Dividir</option>
+              <option value="dividirInt">Dividir por inteiro</option>
+              <option value="dividirRest">Resto da divisão</option>
            </select>
      
            <label for="res">Resultado:</label>
            <input type="text" name="res" id="res" />
      
-           <input type="button" value="Calcular" class="botao" onClick="calcular(document.calcform.oper.value)"/>
+           <input type="button" value="Calcular" class="botao" onClick="calcular(document.calculadora.oper.value)"/>
  </form>  
   <script src="../backend/index.js"></script>
 </body>
