@@ -8,7 +8,7 @@
 }
 #h1-apresentacao{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     font-family:'VT323', monospace; 
     font-size: 450%;
 }
@@ -63,9 +63,18 @@ nav{
 }
 
 input{
-    background-color: black;
+    background-color:black;
     color: aliceblue;
     border-radius: 5px;
     text-align: center; 
-
+}
+.bot{
+    margin-top: 20px;
+    text-align: center; 
+    font-family: 'Cutive Mono', monospace;
+}
+.bio{
+    margin-top: 20px;
+    text-align: center; 
+    font-family: 'Cutive Mono', monospace;
 }
