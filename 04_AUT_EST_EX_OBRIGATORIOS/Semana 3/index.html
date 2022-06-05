@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+  <div>
+    Digite a velocidade inicial:
+  </div>
+  <form action="JavaScript:GetInput()">
+    <input id="input">
+  </form>
+  <script>
+    function GetInput() {
+      var input = document.getElementById("input").value;
+      var resposta = (input * input / (2 * 10))
+      alert(resposta);
+      console.log(resposta);
+    } 
+  </script>
+</body>
+</html>
