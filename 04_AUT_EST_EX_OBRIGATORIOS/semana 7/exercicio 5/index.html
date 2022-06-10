@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>Numero de celular</title>
+    <title>Calcular alunos</title>
 </head>
 <body>
-    <label>Informe seu Numero de telefone</label>
-    <input type="text" data-ls-module="charCounter" maxlength="14" id="number" />
-    <button id="enviar">Enviar</button>
+    <label for="alunos">Informe a quantidade de alunos</label><br />
+    <input id="alunos"/>
+    <button onclick="calc()">Confirmar</button>
+    <div>
+        <ul id="saida"></ul>
+      </div>
+      <div id="saida2"></div>
+  
+
     <script src="script.js"></script>
 </body>
 
