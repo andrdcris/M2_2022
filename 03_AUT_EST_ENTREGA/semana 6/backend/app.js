@@ -8,15 +8,14 @@ const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.use(express.static("../frontend"));
-
 app.use(express.json());
 
-// Retorna todos registros (é o R do CRUD - Read)
+//requisição get etapa 5
 app.get('/experiencia', (req, res) => {
   res.statusCode = 200;
-  res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+  res.setHeader('Access-Control-Allow-Origin', '*'); 
 
-  var db = new sqlite3.Database(DBPATH); // Abre o banco
+  var db = new sqlite3.Database(DBPATH); 
 var sql = 'SELECT * FROM experiencia ORDER BY instituicao COLLATE NOCASE';
   db.all(sql, [],  (err, rows ) => {
       if (err) {
@@ -24,7 +23,7 @@ var sql = 'SELECT * FROM experiencia ORDER BY instituicao COLLATE NOCASE';
       }
       res.json(rows);
   });
-  db.close(); // Fecha o banco
+  db.close(); 
 });
 
 
@@ -43,6 +42,8 @@ app.post('/instituicaoinsert', urlencodedParser, (req, res) => {
   db.close(); // Fecha o banco
   res.end();
 });
+
+
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
