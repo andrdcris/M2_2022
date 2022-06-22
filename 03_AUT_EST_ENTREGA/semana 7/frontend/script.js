@@ -1,4 +1,3 @@
-$('#btn').on("click",botao)
 function botao(){
     $('.bio').append("<h3>Sou Cristiane, brasiliense e apaixonada por inovação e tecnologia</h3>")
 }

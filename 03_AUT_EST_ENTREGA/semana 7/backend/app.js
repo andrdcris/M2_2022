@@ -13,7 +13,7 @@ app.use(express.static("../frontend"));
 
 app.use(express.json());
 
-app.get('/getContato', (req, res) => {
+app.get('/users', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
