@@ -1,13 +1,24 @@
-var num1 = document.getElementById("numero1").value
-var num2 = document.getElementById("numero2").value
-var empty = []
-
 function calcular(){
-    if (num1<0 && num2<0){
-    }
-        else {
-            (num2 == 1)
+    var i = document.getElementById("numero1").value;
+    var limite = document.getElementById("numero2").value;
+    var lista = [];
+
+    while(i <= limite){
+        let primo = true;
+        i++
+        for(let divisor = 2; divisor < i; divisor++){
+            if(i % divisor == 0){
+                primo = false;
+                break;    
+            }    
         }
+
+        if (primo){
+            lista.push(i);
+        } 
+
+        document.getElementById("resultado").innerHTML = "Os números primos desse intervalo são " + lista; 
+    }
 }
 
 
